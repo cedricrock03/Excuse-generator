@@ -2,7 +2,7 @@ import "./style.css";
 
 window.onload = () => {
   //write your code here
-  document.querySelector("#excuse").innerHTML= generateExcuse();
+  document.querySelector("#excuse").innerHTML = generateExcuse();
   document.querySelector("#button").addEventListener("click", generateExcuse);
 };
 function generateExcuse() {
@@ -15,9 +15,8 @@ function generateExcuse() {
   let actionIndx = Math.floor(Math.random() * action.length);
   let whatIndx = Math.floor(Math.random() * what.length);
   let whenIndx = Math.floor(Math.random() * when.length);
-  console.log("clicked button");
 
-  let newphrase =
+  document.querySelector("#excuse").innerHTML =
     who[whoIndx] +
     "" +
     action[actionIndx] +
@@ -25,5 +24,4 @@ function generateExcuse() {
     what[whatIndx] +
     "" +
     when[whenIndx];
-  document.querySelector("#excuse").innerHTML = newphrase;
 }
